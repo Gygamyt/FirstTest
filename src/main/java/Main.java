@@ -3,16 +3,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
 
 public class Main {
 
-    static String firstElementForCheck = "Смартфон Huawei P50 Pocket BAL-L49 Premium Edition 12GB/512GB (роскошное золото)";
-    static String secondElementForCheck = "Смартфон Apple iPhone 13 Pro 1TB (небесно-голубой)";
-    static String thirdElementForCheck = "Смартфон Apple iPhone 11 Pro 512GB (темно-зеленый)";
-
+    static String firstElementForCheck = "Смартфон Apple iPhone 13 Pro 1TB (небесно-голубой)";
+    static String secondElementForCheck = "Смартфон Apple iPhone 13 Pro Max 1TB (альпийский зеленый)";
+    static String thirdElementForCheck = "Смартфон Xiaomi Mi Note 10 Pro 8GB/256GB международная версия (зеленый)";
+    @Test
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32_102\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
