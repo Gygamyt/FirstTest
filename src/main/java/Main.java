@@ -9,21 +9,20 @@ import java.util.ArrayList;
 
 
 public class Main {
+    public static String login = "testaccichserezhi@gmail.com";
+    public static String pass = "hdoey28nf98234";
 
     static String firstElementForCheck = "Смартфон Apple iPhone 13 Pro 1TB (небесно-голубой)";
     static String secondElementForCheck = "Смартфон Apple iPhone 13 Pro Max 1TB (альпийский зеленый)";
     static String thirdElementForCheck = "Смартфон Xiaomi Mi Note 10 Pro 8GB/256GB международная версия (зеленый)";
-    @Test
+
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver_win32_102\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", ConfPropertiesReader.getProperty("chromeDriver"));
         ChromeOptions options = new ChromeOptions();
         options.addArguments("disable-infobars");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
-
-        String login = "testaccichserezhi@gmail.com";
-        String pass = "hdoey28nf98234";
 
         WebElement loginElement = driver.findElement(By.xpath("//div[@class=\"auth-bar__item auth-bar__item--text\"]"));
         loginElement.click();
@@ -70,6 +69,6 @@ public class Main {
         String thirdElement = thirdCheck.getText();
         Thread.sleep(1000);
         System.out.println(firstElement.equals(firstElementForCheck) && secondElement.equals(secondElementForCheck) && thirdElement.equals(thirdElementForCheck));
-        
+
     }
 }
