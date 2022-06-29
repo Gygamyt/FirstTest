@@ -1,9 +1,6 @@
 import Pages.LoginPage;
 import Pages.MainPage;
-import org.testng.annotations.Test;
 
-
-@Test
 public class LoginTest extends AbstractTest {
 
     public static void testLogin() {

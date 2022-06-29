@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-@Test
 public class SearchTest extends AbstractTest {
 
     public static ArrayList<String> checkList = new ArrayList<>() {{

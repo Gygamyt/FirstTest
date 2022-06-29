@@ -11,7 +11,6 @@ public class Setuper {
 
     private static WebDriver driver;
 
-    @Test
     public static void setup() {
         System.setProperty("webdriver.chrome.driver", ConfPropertiesReader.getProperty("chromeDriver"));
         driver = new ChromeDriver();
