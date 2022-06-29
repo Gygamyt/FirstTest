@@ -24,7 +24,7 @@ public class SearchTest extends AbstractTest {
     public static void testSearch() {
         try {
             MainPage.searchBarClick();
-            MainPage.inputSearchBar(TestOnliner.request);
+            MainPage.inputSearchBar(OnlinerTest.request);
             MainPage.switchFrame();
             MainPage.targetClick();
             CatalogMobilePage.schemaButtonClick();

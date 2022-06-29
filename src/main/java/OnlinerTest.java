@@ -2,6 +2,7 @@ import org.testng.annotations.Test;
 
 public class OnlinerTest {
 
+    public static String request = "Мобильные телефоны";
 
     @Test
     public static void loginTest() {
