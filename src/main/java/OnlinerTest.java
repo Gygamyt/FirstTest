@@ -1,23 +1,26 @@
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class OnlinerTest {
 
     public static String request = "Мобильные телефоны";
 
+    @BeforeMethod
+    public static void start() {
+        Setuper.setup();
+    }
+
+    @AfterMethod
+    public static void close() {
+        Setuper.close();
+    }
+
     @Test
     public static void loginTest() {
-        LoginTest.setup();
         LoginTest.testLogin();
-        LoginTest.close();
     }
 
     @Test
     public static void searchTest() {
-        try {
-            SearchTest.setup();
-            SearchTest.testSearch();
-        } finally {
-            SearchTest.close();
-        }
+        SearchTest.testSearch();
     }
 }

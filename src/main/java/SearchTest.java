@@ -17,10 +17,6 @@ public class SearchTest extends AbstractTest {
 
     public static ArrayList<String> resultList = new ArrayList<>();
 
-    public static void setup() {
-        Setuper.setup();
-    }
-
     public static void testSearch() {
         try {
             MainPage.searchBarClick();
@@ -38,9 +34,4 @@ public class SearchTest extends AbstractTest {
             e.printStackTrace();
         }
     }
-
-    public static void close() {
-        Setuper.close();
-    }
-
 }
