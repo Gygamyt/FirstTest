@@ -1,3 +1,5 @@
+package Pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,25 +14,25 @@ public class CatalogMobilePage {
     }
 
     @FindBy(xpath = "//div[@class=\"schema-order\"]")
-    private WebElement schemaButton;
+    private static WebElement schemaButton;
 
     @FindBy(xpath = "//span[text()=\"Дорогие\"]")
-    private WebElement sortButton;
+    private static WebElement sortButton;
 
     @FindBy(xpath = "(//div[@class=\"schema-product__group\"]//span[@data-bind=\"html: product.extended_name || product.full_name\"])[1]")
-    public WebElement firstPhone;
+    public static WebElement firstPhone;
 
     @FindBy(xpath = "(//div[@class=\"schema-product__group\"]//span[@data-bind=\"html: product.extended_name || product.full_name\"])[2]")
-    public WebElement secondPhone;
+    public static WebElement secondPhone;
 
     @FindBy(xpath = "(//div[@class=\"schema-product__group\"]//span[@data-bind=\"html: product.extended_name || product.full_name\"])[3]")
-    public WebElement thirdPhone;
+    public static WebElement thirdPhone;
 
-    public void schemaButtonClick() {
+    public static void schemaButtonClick() {
         schemaButton.click();
     }
 
-    public void sortButtonClick() {
+    public static void sortButtonClick() {
         sortButton.click();
     }
 

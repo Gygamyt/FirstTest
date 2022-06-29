@@ -1,3 +1,5 @@
+package Pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,25 +14,25 @@ public class LoginPage {
     }
 
     @FindBy(xpath = "//input[@placeholder=\"Ник или e-mail\"]") //email field
-    private WebElement emailElement;
+    private static WebElement emailElement;
 
     @FindBy(xpath = "//input[@placeholder=\"Пароль\"]") //password field
-    private WebElement passwordElement;
+    private static WebElement passwordElement;
 
     @FindBy(xpath = "(//button[@type=\"submit\"])[2]")
-    private WebElement loginButton;
+    private static WebElement loginButton;
 
-    public void inputEmail(String email) {
+    public static void inputEmail(String email) {
         emailElement.click();
         emailElement.sendKeys(email);
     }
 
-    public void inputPassword(String password) {
+    public static void inputPassword(String password) {
         passwordElement.click();
         passwordElement.sendKeys(password);
     }
 
-    public void loginButtonClick() {
+    public static void loginButtonClick() {
         loginButton.click();
     }
 
