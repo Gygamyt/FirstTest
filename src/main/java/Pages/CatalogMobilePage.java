@@ -6,11 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CatalogMobilePage {
-    public WebDriver webDriver;
 
     public CatalogMobilePage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
-        this.webDriver = webDriver;
     }
 
     @FindBy(xpath = "//div[@class=\"schema-order\"]")

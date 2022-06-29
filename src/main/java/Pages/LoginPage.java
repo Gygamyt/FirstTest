@@ -6,11 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    public WebDriver webDriver;
 
     public LoginPage(WebDriver webDriver) {
         PageFactory.initElements(webDriver, this);
-        this.webDriver = webDriver;
     }
 
     @FindBy(xpath = "//input[@placeholder=\"Ник или e-mail\"]") //email field
