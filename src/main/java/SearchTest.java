@@ -1,8 +1,6 @@
-import Outdated.TestOnliner;
 import Pages.CatalogMobilePage;
 import Pages.MainPage;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
