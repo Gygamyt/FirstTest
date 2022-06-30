@@ -1,23 +1,39 @@
 import Pages.CatalogMobilePage;
 import Pages.MainPage;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
 public class SearchTest extends AbstractTest {
 
-    public static ArrayList<String> checkList = new ArrayList<>() {{
+    static String request = "Мобильные телефоны";
+
+    static ArrayList<String> checkList = new ArrayList<>() {{
         add("Смартфон Samsung Galaxy M30s 4GB/64GB (черный)");
         add("Смартфон Apple iPhone 13 Pro Max 1TB (альпийский зеленый)");
         add("Смартфон Apple iPhone 12 Pro Max 512GB (золотой)");
     }};
 
-    public static ArrayList<String> resultList = new ArrayList<>();
+    static ArrayList<String> resultList = new ArrayList<>();
 
+    @BeforeClass
+    public static void start() {
+        Setuper.setup();
+    }
+
+    @AfterClass
+    public static void close() {
+        Setuper.close();
+    }
+
+    @Test
     public static void testSearch() {
         try {
             MainPage.searchBarClick();
-            MainPage.inputSearchBar(OnlinerTest.request);
+            MainPage.inputSearchBar(request);
             MainPage.switchFrame();
             MainPage.targetClick();
             CatalogMobilePage.schemaButtonClick();
