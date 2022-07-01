@@ -3,12 +3,12 @@ import org.testng.annotations.BeforeClass;
 
 public abstract class AbstractTest {
     @BeforeClass
-    public static void start() {
+    private static void start() {
         Setuper.setup();
     }
 
     @AfterClass
-    public static void close() {
+    private static void close() {
         Setuper.close();
     }
 }

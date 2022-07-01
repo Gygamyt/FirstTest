@@ -22,6 +22,6 @@ public class Setuper {
     }
 
     public static void close() {
-        driver.close();
+        driver.quit();
     }
 }

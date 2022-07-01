@@ -7,17 +7,17 @@ import org.testng.annotations.Test;
 public class LoginTest extends AbstractTest {
 
     @BeforeClass
-    public static void start() {
+    private static void start() {
         Setuper.setup();
     }
 
     @AfterClass
-    public static void close() {
+    private static void close() {
         Setuper.close();
     }
 
     @Test
-    public static void testLogin() {
+    private static void testLogin() {
         MainPage.loginButtonClick();
         LoginPage.inputEmail(ConfPropertiesReader.getProperty("login"));
         LoginPage.inputPassword(ConfPropertiesReader.getProperty("password"));

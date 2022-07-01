@@ -20,17 +20,17 @@ public class SearchTest extends AbstractTest {
     static ArrayList<String> resultList = new ArrayList<>();
 
     @BeforeClass
-    public static void start() {
+    private static void start() {
         Setuper.setup();
     }
 
     @AfterClass
-    public static void close() {
+    private static void close() {
         Setuper.close();
     }
 
     @Test
-    public static void testSearch() {
+    private static void testSearch() {
         try {
             MainPage.searchBarClick();
             MainPage.inputSearchBar(request);
